@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: springdemo
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: springdemo
@@ -16,10 +16,10 @@ spec:
         - name: springtransactional
           image: badrinathwrk/springdemo:springdemo
           ports:
-            - containerPort: 8080
+            - containerPort: 9000
           env:
             - name: PORT
-              value: "8080"
+              value: "9000"
           imagePullPolicy: Always
 
 
@@ -31,6 +31,6 @@ spec:
   type: LoadBalancer
   ports:
     - port: 80
-      targetPort: 8080
+      targetPort: 9000
   selector:
     app: springdemo
