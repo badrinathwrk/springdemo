@@ -14,7 +14,7 @@
 	<name>demo</name>
 	<description>spring boot demo</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 	</properties>
 	<dependencies>
